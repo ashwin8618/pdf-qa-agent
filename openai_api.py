@@ -8,4 +8,5 @@ def get_generation(prompt: str, model_name="gpt-4o-mini"):
         model=model_name, messages=[{"role": "user", "content": prompt}]
     )
 
+    # handle exceptions here
     return completion.choices[0].message

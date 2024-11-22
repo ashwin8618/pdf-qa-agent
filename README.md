@@ -2,6 +2,9 @@
 
 Application for answering questions from a PDF.
 It uses Retrieval Augmented Generation to add context to the questions before calling your LLM of choice.
+Vector Store is used to store the document embeddings. Documents closer in similarity to the query is retrieved from the vector stores.
+Along with the user query, docuemnts from the vector store are added to the prompt and sent to llm chat api.
+The output is printed on the command line.
 
 ## Table of Contents
 
@@ -13,7 +16,7 @@ It uses Retrieval Augmented Generation to add context to the questions before ca
 1. Clone the repository:
 
 ```bash
- git clone https://github.com/yourusername/yourproject.git
+ git clone https://github.com/ashwin8618/pdf-qa-agent.git
 ```
 
 2. Install dependencies:
@@ -31,8 +34,8 @@ To run the project, use the following command on linux:
 export OPENAI_API_KEY = "{YOUR-API-KEY-HERE}"
 poetry run python main.py
 ```
-add the pdf document to the docs/ directory
 
+add the pdf document to the docs/ directory
 
 ## Design
 
